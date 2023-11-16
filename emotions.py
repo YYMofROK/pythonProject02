@@ -55,7 +55,7 @@ while cap.isOpened(): # True:
         gray_image
         , scaleFactor=1.1
         , minNeighbors=5
-        ,minSize=(250, 250)
+        , minSize=(250, 250)
         , flags=cv2.CASCADE_SCALE_IMAGE
     )
 
