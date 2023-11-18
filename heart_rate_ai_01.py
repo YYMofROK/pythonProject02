@@ -48,7 +48,7 @@ while True:
         if len(heart_rates) >= 10:
             heart_rate_history = heart_rates[-10:]
             heart_rate_average = np.mean(heart_rate_history)
-            heart_rate_average = heart_rate_average * 0.7
+            heart_rate_average = heart_rate_average * 0.7       # RGB 중에서 R 칼라 속성을 이용한 심박수 측정 가중치
 
         # Display the current heart rate
         cv2.putText(frame, f"Heart Rate: {heart_rate_average:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
