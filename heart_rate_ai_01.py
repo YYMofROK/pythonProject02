@@ -31,7 +31,12 @@ while True:
 
     # Detect faces using the cascade classifier
     faces = face_cascade.detectMultiScale(
-        gray_image, scaleFactor=1.5, minNeighbors=5, minSize=(250, 250), flags=cv2.CASCADE_SCALE_IMAGE
+        gray_image
+        , scaleFactor=1.1
+        , minNeighbors=5
+        , flags=cv2.CASCADE_SCALE_IMAGE
+        , minSize=(360, 360)
+        , maxSize=(370, 370)
     )
 
     # Process detected faces
@@ -51,7 +56,7 @@ while True:
         if len(heart_rates) >= 10:
             heart_rate_history = heart_rates[-10:]
             heart_rate_average = np.mean(heart_rate_history)
-            heart_rate_average = heart_rate_average * 0.68       # RGB - R add value
+            heart_rate_average = heart_rate_average * 0.7       # RGB - R add value
 
         # Draw a filled bounding box around the detected face
         # cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), cv2.FILLED)
