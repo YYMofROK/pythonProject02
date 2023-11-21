@@ -35,8 +35,8 @@ while True:
         , scaleFactor=1.1
         , minNeighbors=5
         , flags=cv2.CASCADE_SCALE_IMAGE
-        , minSize=(360, 360)
-        , maxSize=(370, 370)
+        , minSize=(250, 250)
+        , maxSize=(500, 500)
     )
 
     # Process detected faces

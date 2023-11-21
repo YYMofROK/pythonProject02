@@ -34,7 +34,12 @@ while True:
 
     # Detect faces using the cascade classifier
     faces = face_cascade.detectMultiScale(
-        gray_image, scaleFactor=1.5, minNeighbors=5, minSize=(250, 250), flags=cv2.CASCADE_SCALE_IMAGE
+        gray_image
+        , scaleFactor=1.1
+        , minNeighbors=5
+        , flags=cv2.CASCADE_SCALE_IMAGE
+        , minSize=(250, 250)
+        , maxSize=(500, 500)
     )
 
     # Process detected faces
